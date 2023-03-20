@@ -4,23 +4,25 @@ import numpy as np #importa a biblioteca NumPy associada ao comando np com a fun
 import pandas as pd #importa a biblioteca pandas associada ao comando pd com a função de facilitar a manipulação de dados a partir de diversos tipos de entrada.
 from sklearn import datasets, linear_model #importa a biblioteca sklearn com as funções 1- Armazenar conjunto de datasets que podem ser importados. 2- de implementar varios modelos de calculos lineares
 from sklearn.metrics import mean_squared_error, r2_score #importa a biblioteca como ferramentas de coeficiente de corelação
-
-dataPre = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
-data=dataPre.iloc[5:6,0:64]
-print('data', data)
-'''fmap_data = map(float,data)
-print('fmap=',fmap_data)
-flist_data = list(fmap_data)
-print('flist=',flist_data)
-data1 = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
-print('data1', data1)
-data2=data1.iloc[:1,:64]
-print ('data2=',data2)
-data_prep=pd.DataFrame([data],columns=list(data2))
-print ('dataprep=',data_prep)'''
-out=data
-for i in out:
-    print(i, data[i])
+import random
+charReal = 1
+charPrevisto = 2
+contador=0
+while charReal != charPrevisto:
+    contador += 1
+    linha = random.randint(0,3824)
+    dataPre = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
+    data=dataPre.iloc[linha:linha+1,0:64]
+    #print('data\n', data)
+    #print('dataPre\n', dataPre.iloc[linha:linha+1,64])
+    charReal=int(dataPre.iloc[linha:linha+1,64])
+    out=data
     loaded_model = p1.load(open('dataset/character_predictor', 'rb'))
-    y_prep=loaded_model.predict(data)
-    print('Caractere: ',int(y_prep))
+    charPrevisto = int(loaded_model.predict(data))
+    #print(charPrevisto)
+    if charReal == charPrevisto:
+        print('Previsão CORRETA <==============================================================================')
+    else: print('Previsão INCORRETA')
+    print('linha: ', linha)
+    print('Caractere Real: ',charReal,'Caractere Previsto: ', int(charPrevisto),'\n')
+print('Foram ', contador, 'tentativas até um match.')
