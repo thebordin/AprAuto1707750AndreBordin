@@ -5,9 +5,11 @@ import pandas as pd #importa a biblioteca pandas associada ao comando pd com a f
 from sklearn import datasets, linear_model #importa a biblioteca sklearn com as funções 1- Armazenar conjunto de datasets que podem ser importados. 2- de implementar varios modelos de calculos lineares
 from sklearn.metrics import mean_squared_error, r2_score #importa a biblioteca como ferramentas de coeficiente de corelação
 import random
+
 charReal = 1
 charPrevisto = 2
 contador=0
+
 while charReal != charPrevisto:
     contador += 1
     linha = random.randint(0,3824)
@@ -23,6 +25,6 @@ while charReal != charPrevisto:
     if charReal == charPrevisto:
         print('Previsão CORRETA <==============================================================================')
     else: print('Previsão INCORRETA')
-    print('linha: ', linha)
+    print('linha: ', linha+1)
     print('Caractere Real: ',charReal,'Caractere Previsto: ', int(charPrevisto),'\n')
 print('Foram ', contador, 'tentativas até um match.')
