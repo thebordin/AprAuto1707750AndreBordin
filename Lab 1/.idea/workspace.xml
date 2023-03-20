@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ccf4fb9-f8d6-4f05-b7eb-b957d2781e4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Lab 1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/execucao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01 Casa/execucao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/treinoChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01 Casa/treinoChar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teste.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/character_predictor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/optdigits.tes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/optdigits.tra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/treino.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/Lab 01 Casa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/Lab 01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/dataset/character_predictor" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/dataset/character_predictor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/dataset/optdigits.tes" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/dataset/optdigits.tes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/dataset/optdigits.tra" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/dataset/optdigits.tra" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/dataset/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/dataset/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/execucao.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/execucao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/treinoChar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/treinoChar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 01 Casa/treinoTestar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/treinoTestar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
