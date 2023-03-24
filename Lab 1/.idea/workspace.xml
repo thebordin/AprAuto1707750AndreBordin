@@ -37,6 +37,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1707750\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 1\Lab 01" />
+      <recent name="C:\Users\1707750\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 1\" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.execucao (1)">
     <configuration name="execucao (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lab 1" />
@@ -109,11 +115,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 01 Casa" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 01" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\1707750\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 1\Lab 01\treinoChar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 01/treinoChar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="treinoTestar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="treinoTestar (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lab 1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,11 +136,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 01 Casa" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 01" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\1707750\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 1\Lab 01\treinoTestar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 01/treinoTestar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,10 +152,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.execucao (1)" />
+        <item itemvalue="Python.treinoChar" />
+        <item itemvalue="Python.treinoTestar (1)" />
         <item itemvalue="Python.pred" />
         <item itemvalue="Python.execucao" />
-        <item itemvalue="Python.treinoTestar" />
-        <item itemvalue="Python.treinoChar" />
       </list>
     </recent_temporary>
   </component>
