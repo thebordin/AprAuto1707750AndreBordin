@@ -7,18 +7,11 @@ import pandas as pd
 
 n_neighbors = 15
 # import some data to play with
-#iris = datasets.load_iris()
-dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
-xyraw = dataset[:]
-X=xyraw.iloc[:,:2]
-y=xyraw.iloc[:,64:65]
-X=X.values.tolist()
-X=np.array(X)
-Y= y[64].values.tolist()
-y=np.array(Y)
+iris = datasets.load_iris()
+X = iris.data[:, :2]
+y = iris.target
 h = 0.02 # step size in the mesh
-print(len(y))
-
+print(type(y))
 # Create color maps
 cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
 cmap_bold = ["darkorange", "c", "darkblue"]
@@ -37,18 +30,20 @@ for weights in ["uniform", "distance"]:
     plt.contourf(xx, yy, Z, cmap=cmap_light)
 
 # Plot also the training points
+hue = ''
 sns.scatterplot(
     x=X[:, 0],
     y=X[:, 1],
-    hue=Y,
+    hue=iris.target_names[y],
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="black",)
-plt.xlim(xx.min(), xx.max())
+print(iris.target_names[1])
+'''plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights))
-plt.xlabel(Y[0])
-plt.ylabel(Y[1])
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
 
 # Plot a predict point
 sns.scatterplot(
@@ -56,8 +51,9 @@ sns.scatterplot(
     y=(X[1,1]+X[43,1])/2,
     marker="X",
     s=90,
-    hue=Y,
+    hue=iris.target_names[y],
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="w",)
 plt.show()
+'''
