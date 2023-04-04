@@ -4,21 +4,26 @@ import seaborn as sns
 from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets
 import pandas as pd
+import random
 
 n_neighbors = 15
-# import some data to play with
-iris = datasets.load_iris()
-X = iris.data[:, :2]
-y = iris.target
+# import some data to play with =]
+#iris = datasets.load_iris()
+dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
+xyraw = dataset[:]
+X=xyraw.iloc[:,50:52]
+y=xyraw.iloc[:,64:65]
+print(type(X))
+X=X.values.tolist() #Transforma de dataframe para lista
+X=np.array(X) #Transforma em array do numpy
+Y= y[64].values.tolist()
+y=np.array(Y)
 h = 0.02 # step size in the mesh
-<<<<<<< Updated upstream
-print(type(y))
-=======
-print(X)
->>>>>>> Stashed changes
+print(len(y))
+
 # Create color maps
-cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
-cmap_bold = ["darkorange", "c", "darkblue"]
+cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple'])
+cmap_bold = ['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple', 'black']
 
 for weights in ["uniform", "distance"]:
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
@@ -32,32 +37,30 @@ for weights in ["uniform", "distance"]:
     Z = Z.reshape(xx.shape)
     plt.figure(figsize=(8, 6))
     plt.contourf(xx, yy, Z, cmap=cmap_light)
-
 # Plot also the training points
-hue = ''
 sns.scatterplot(
     x=X[:, 0],
     y=X[:, 1],
-    hue=iris.target_names[y],
+    hue=Y,
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="black",)
-print(iris.target_names[1])
-'''plt.xlim(xx.min(), xx.max())
+plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights))
-plt.xlabel(iris.feature_names[0])
-plt.ylabel(iris.feature_names[1])
+plt.xlabel(Y[0])
+plt.ylabel(Y[1])
 
 # Plot a predict point
+z=random.randint(0,3822)
+print('Linha: ',z,' Numero esperado:', y[z])
 sns.scatterplot(
-    x=(X[1,0]+X[43,0])/2,
-    y=(X[1,1]+X[43,1])/2,
+    x=X[z,0],
+    y=X[z,1],
     marker="X",
     s=90,
-    hue=iris.target_names[y],
+    hue=Y,
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="w",)
 plt.show()
-'''
