@@ -19,8 +19,8 @@ y=np.array(Y)
 h = 0.02 # step size in the mesh
 
 # Create color maps
-cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple'])
-cmap_bold = ['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple', 'black']
+cmap_light = ListedColormap(['silver', 'sandybrown', 'darksalmon', 'white','bisque','moccasin','palegreen','paleturquoise','deepskyblue', 'm'])
+cmap_bold = ['darkorchid','blue','darkcyan','darkgreen','darkkhaki','gold','sienna','red','black','navy']
 
 for weights in ["uniform", "distance"]:
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)

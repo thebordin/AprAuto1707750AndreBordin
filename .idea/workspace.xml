@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Lab 2/reducaoVetor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 2/reducaoVetor.py" afterDir="false" />
+    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="p">
+      <change beforePath="$PROJECT_DIR$/Lab 2/colunasAleatorias.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 2/colunasAleatorias.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,18 @@
       <option name="presentableId" value="Default" />
       <updated>1680256481213</updated>
     </task>
+    <task id="LOCAL-00001" summary="p">
+      <created>1680809846841</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680809846841</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="p" />
+    <option name="LAST_COMMIT_MESSAGE" value="p" />
   </component>
 </project>
