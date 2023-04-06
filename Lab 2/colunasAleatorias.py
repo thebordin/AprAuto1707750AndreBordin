@@ -13,13 +13,10 @@ dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
 xyraw = dataset[:]
 X=xyraw.iloc[:,50:52]
 y=xyraw.iloc[:,64:65]
-print(type(X))
-X=X.values.tolist() #Transforma de dataframe para lista
 X=np.array(X) #Transforma em array do numpy
-Y= y[64].values.tolist()
+Y= y[64].values.tolist()#Transforma de dataframe para lista
 y=np.array(Y)
 h = 0.02 # step size in the mesh
-print(len(y))
 
 # Create color maps
 cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple'])

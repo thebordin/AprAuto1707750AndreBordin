@@ -9,62 +9,70 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 import random
 ################## NÃO FINALIZADO ################################
-rng=random.randint(0,3822)
+
+# Gerar um número aleatório entre 0 e 3822
+rng = np.random.randint(0, 3822)
+
+# Definir o número de vizinhos mais próximos
 n_neighbors = 15
-# import some data to play with =]
+
+# Importar o conjunto de dados
 dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
 xyraw = dataset[:]
-X=xyraw.iloc[:,0:64]
-y=xyraw.iloc[:,64:65]
-#X=X.values.tolist() #Transforma de dataframe para lista
-X=np.array(X) #Transforma em array do numpy
-y= y[64].values.tolist()
-y=np.array(y)
-X_test=xyraw.iloc[rng,0:64]
-y_test=xyraw.iloc[rng,64:65]
-X_test=X_test.values.tolist()
-print((X_test))
+
+# Separar as variáveis dependentes e independentes
+X = xyraw.iloc[0:200, 0:64]
+y = xyraw.iloc[0:200, 64:65]
+y = y[64].values.tolist()
+
+# Selecionar a observação de teste
+X_test = xyraw.iloc[rng, 0:64]
+y_test = xyraw.iloc[rng, 64:65]
+
+# Padronizar as entradas
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+X_test_scaled = scaler.transform([X_test])
+
+print(X)
 y_esperado=np.array(y_test)
 print('Linha: ',rng,' Numero esperado:', y_esperado)
 
-### Padronização das entradas:
-nca = make_pipeline(StandardScaler(), NeighborhoodComponentsAnalysis(
-n_components=64, random_state=None), )
-nca.fit(X, y)
+# Reduzir as dimensões das entradas
+nca = make_pipeline(StandardScaler(), NeighborhoodComponentsAnalysis(n_components=2, random_state=None))
+X_nca = nca.fit_transform(X_scaled, y)
+
+# Treinar o modelo de KNN
 knn = neighbors.KNeighborsClassifier(n_neighbors)
-knn.fit(nca.transform(X), y)
-print(nca.predict(X_test))
+knn.fit(X_nca, y)
 
-'''#### Redução do vetor
-knn = neighbors.KNeighborsClassifier(n_neighbors)
-knn.fit(X, y)
-print(knn.score(X_test, y_test))
-
-nca = NeighborhoodComponentsAnalysis(n_components=2, random_state=None)
-nca.fit(X, y)
-knn.fit(nca.transform(X), y)
-#print(knn.score(nca.transform(X_test), y_test))'''
-
-XX=np.c_[nca.transform(X_test),y_test]
-XX=XX[np.argsort(XX[:, 2])]
-sns.scatterplot(x=XX[:, 0], y=XX[:, 1],
-hue=Y,
-palette=cmap_bold, alpha=1.0, edgecolor="black",)
-plt.show()
-
-'''h = 0.02 # step size in the mesh
-print(X)
+# Fazer a previsão para a observação de teste
+X_test_nca = nca.transform(X_test_scaled)
+y_pred = knn.predict(X_test_nca)[0]
+print(knn.score(X_test_nca, y_test))
 
 # Create color maps
-cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
-cmap_bold = ["darkorange", "c", "darkblue"]
-
+cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple'])
+cmap_bold = ['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple', 'black']
+'''
+# Definição da plotagem
+XX=np.c_[X_scaled,y]
+XX=XX[np.argsort(XX[:, 2])]
+sns.scatterplot(x=XX[:, 0], y=XX[:, 1],
+hue=y,
+palette=cmap_bold, alpha=1.0, edgecolor="black",)
+plt.show()
+'''
+# Definição do Grid
+h = 0.02
+print(X_nca)
+# Plotagem Inicial
 for weights in ["uniform", "distance"]:
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
-    clf.fit(X, y)
+    clf.fit(X_nca, y)
     # point in the mesh [x_min, x_max]x[y_min, y_max].
-    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    x_min, x_max = X_nca[:, 0].min() - 1, X_nca[:, 0].max() + 1
+    y_min, y_max = X_nca[:, 1].min() - 1, X_nca[:, 1].max() + 1
     xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
     # Put the result into a color plot
@@ -72,30 +80,39 @@ for weights in ["uniform", "distance"]:
     plt.figure(figsize=(8, 6))
     plt.contourf(xx, yy, Z, cmap=cmap_light)
 
-# Plot also the training points
+# Plotagem
 sns.scatterplot(
-    x=X[:, 0],
-    y=X[:, 1],
-    hue=Y,
+    x=X_nca[:, 0],
+    y=X_nca[:, 1],
+    hue=y,
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="black",)
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights))
-plt.xlabel(Y[0])
-plt.ylabel(Y[1])
+plt.xlabel(y[0])
+plt.ylabel(y[1])
 
 # Plot a predict point
 
 sns.scatterplot(
-    x=X[rng,0],
-    y=X[rng,1],
+    x=X_test_nca,
+    y=y_pred,
     marker="X",
     s=90,
-    hue=Y,
+    hue=y,
+    palette=cmap_bold,
+    alpha=1.0,
+    edgecolor="w",)
+
+sns.scatterplot(
+    x=X_test_nca,
+    y=y_esperado,
+    marker="O",
+    s=90,
+    hue=y,
     palette=cmap_bold,
     alpha=1.0,
     edgecolor="w",)
 plt.show()
-'''
