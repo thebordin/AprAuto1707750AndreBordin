@@ -34,7 +34,6 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 X_test_scaled = scaler.transform([X_test])
 
-print(X)
 y_esperado=np.array(y_test)
 print('Linha: ',rng,' Numero esperado:', y_esperado)
 
@@ -49,25 +48,15 @@ knn.fit(X_nca, y)
 # Fazer a previsão para a observação de teste
 X_test_nca = nca.transform(X_test_scaled)
 y_pred = knn.predict(X_test_nca)[0]
-print(knn.score(X_test_nca, y_test))
 
 # Create color maps
 cmap_light = ListedColormap(['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple'])
 cmap_bold = ['orange', 'cyan', 'cornflowerblue', 'red', 'yellow', 'pink', 'grey', 'green', 'purple', 'black']
-'''
-# Definição da plotagem
-XX=np.c_[X_scaled,y]
-XX=XX[np.argsort(XX[:, 2])]
-sns.scatterplot(x=XX[:, 0], y=XX[:, 1],
-hue=y,
-palette=cmap_bold, alpha=1.0, edgecolor="black",)
-plt.show()
-'''
+
 # Definição do Grid
 h = 0.02
-print(X_nca)
 # Plotagem Inicial
-for weights in ["uniform", "distance"]:
+for weights in ["distance"]:
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
     clf.fit(X_nca, y)
     # point in the mesh [x_min, x_max]x[y_min, y_max].
@@ -97,7 +86,7 @@ plt.ylabel(y[1])
 # Plot a predict point
 
 sns.scatterplot(
-    x=X_test_nca,
+    x=y_pred,
     y=y_pred,
     marker="X",
     s=90,
@@ -106,13 +95,4 @@ sns.scatterplot(
     alpha=1.0,
     edgecolor="w",)
 
-sns.scatterplot(
-    x=X_test_nca,
-    y=y_esperado,
-    marker="O",
-    s=90,
-    hue=y,
-    palette=cmap_bold,
-    alpha=1.0,
-    edgecolor="w",)
 plt.show()
