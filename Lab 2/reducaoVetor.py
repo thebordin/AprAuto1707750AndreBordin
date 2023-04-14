@@ -7,7 +7,6 @@ import pandas as pd
 from sklearn.neighbors import NeighborhoodComponentsAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
-import random
 ################## NÃO FINALIZADO ################################
 
 # Gerar um número aleatório entre 0 e 3822
@@ -21,41 +20,35 @@ dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
 xyraw = dataset[:]
 
 # Separar as variáveis dependentes e independentes
-X = xyraw.iloc[0:200, 0:64]
-y = xyraw.iloc[0:200, 64:65]
+X = xyraw.iloc[0:400, 0:64]
+y = xyraw.iloc[0:400, 64:65]
 y = y[64].values.tolist()
 
 # Selecionar a observação de teste
 X_test = xyraw.iloc[rng, 0:64]
 y_test = xyraw.iloc[rng, 64:65]
-
-# Padronizar as entradas
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
-X_test_scaled = scaler.transform([X_test])
-
+X_test = X_test.to_frame().T
 y_esperado=np.array(y_test)
+
 print('Linha: ',rng,' Numero esperado:', y_esperado)
 
 # Reduzir as dimensões das entradas
 nca = make_pipeline(StandardScaler(), NeighborhoodComponentsAnalysis(n_components=2, random_state=None))
-X_nca = nca.fit_transform(X_scaled, y)
+X_nca = nca.fit_transform(X,y)
 
 # Treinar o modelo de KNN
 knn = neighbors.KNeighborsClassifier(n_neighbors)
 knn.fit(X_nca, y)
-
 # Fazer a previsão para a observação de teste
-X_test_nca = nca.transform(X_test_scaled)
+X_test_nca = nca.transform(X_test)
 y_pred = knn.predict(X_test_nca)[0]
-
 # Create color maps
 cmap_light = ListedColormap(['silver', 'sandybrown', 'darksalmon', 'white','bisque','moccasin','palegreen','paleturquoise','deepskyblue', 'm'])
 cmap_bold = ['darkorchid','blue','darkcyan','darkgreen','darkkhaki','gold','sienna','red','black','navy']
 
 # Definição do Grid
 h = 0.02
-# Plotagem Inicial
+# Plotagem Inicial com classificação
 for weights in ["distance"]:
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
     clf.fit(X_nca, y)
@@ -84,8 +77,9 @@ plt.xlabel(y[0])
 plt.ylabel(y[1])
 
 # Plot a predict point
-
+#y_pred=y_pred.tolist()
 sns.scatterplot(
+    legend=False,
     x=y_pred,
     y=y_pred,
     marker="X",

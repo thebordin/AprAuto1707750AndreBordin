@@ -11,11 +11,8 @@ iris = datasets.load_iris()
 X = iris.data[:, :2]
 y = iris.target
 h = 0.02 # step size in the mesh
-<<<<<<< Updated upstream
 print(type(y))
-=======
 print(X)
->>>>>>> Stashed changes
 # Create color maps
 cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
 cmap_bold = ["darkorange", "c", "darkblue"]
@@ -43,11 +40,11 @@ sns.scatterplot(
     alpha=1.0,
     edgecolor="black",)
 print(iris.target_names[1])
-'''plt.xlim(xx.min(), xx.max())
+plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights))
 plt.xlabel(iris.feature_names[0])
-plt.ylabel(iris.feature_names[1])
+#plt.ylabel(iris.feature_names[1])
 
 # Plot a predict point
 sns.scatterplot(
@@ -60,4 +57,3 @@ sns.scatterplot(
     alpha=1.0,
     edgecolor="w",)
 plt.show()
-'''
