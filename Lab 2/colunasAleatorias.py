@@ -54,6 +54,7 @@ print('Linha: ',z,' Numero esperado:', y[z])
 sns.scatterplot(
     x=X[z,0],
     y=X[z,1],
+    legend=False,
     marker="X",
     s=90,
     hue=Y,
