@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.neighbors import NeighborhoodComponentsAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
-################## Não FINALIZADO ################################
+################## FINALIZADO ################################
 
 cmap_pred = []
 limite = int(1000)

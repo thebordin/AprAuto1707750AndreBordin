@@ -12,8 +12,8 @@ from sklearn import linear_model
 #Parametros
 url_train='dataset/optdigits.tra'
 url_test='dataset/optidigits.tes'
-url_predictor='dataset/character_snca_predictor'
-limite= 500 # 1797
+url_predictor='dataset/character_snca_predictor_uncomplete'
+limite= 500 # 3823
 n_neighbors = 12
 grid = 2
 pesos = ["uniform"] #"uniform" "distance"
