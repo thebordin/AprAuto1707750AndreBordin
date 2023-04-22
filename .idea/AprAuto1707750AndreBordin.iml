@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/AprAuto1707750AndreBordin/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (AprAuto1707750AndreBordin)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.11 (AprAuto1707750AndreBordin)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

@@ -1,22 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from matplotlib.colors import ListedColormap
+import matplotlib.colors as mcolors
 from sklearn import neighbors, datasets
 import pandas as pd
 from sklearn.neighbors import NeighborhoodComponentsAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 ################## Não FINALIZADO ################################
-limite = int(1750)
+
+cmap_pred = []
+limite = int(1000)
 # Gerar um número aleatório entre 0 e 3822
 rng = np.random.randint(0, limite)
 # Definir o número de vizinhos mais próximos
 n_neighbors = 12
-# Create color maps
-cmap_light = ListedColormap(['silver', 'sandybrown', 'darksalmon', 'white','bisque','moccasin','palegreen','paleturquoise','deepskyblue', 'm'])
-cmap_bold = ['darkorchid','blue','darkcyan','darkgreen','darkkhaki','gold','sienna','red','black','navy']
-cmapa=sns.color_palette('BrBG', as_cmap=True)
 # Importar o conjunto de dados
 dataset = pd.read_csv('dataset/optdigits.tra', sep=',', header=None)
 xyraw = dataset[:]
@@ -49,6 +47,19 @@ y_pred = knn.predict(X_test_nca)[:]
 
 # Definição do Grid
 h = 1
+#Cmap e Cmap para lista:
+cmapa=sns.color_palette('BrBG',n_colors=20, as_cmap=True)
+
+##Gambiarra 1
+def gambi1():
+    cmapaLista = [mcolors.rgb2hex(cmapa(i)) for i in range(cmapa.N)]
+    ylen=len(set(y))
+    maplen = len(cmapaLista)
+    salto = int(maplen/ylen)
+    cmapaLista = [mcolors.rgb2hex(cmapa(i)) for i in range(0,cmapa.N,salto+3)]
+    cmap_pred.append(cmapaLista[int(y_pred)])
+gambi1()
+## Gambiarra 2
 
 # Define os agrupamentos e coloração do grafico
 #for weights in ["uniform"]:
@@ -63,35 +74,38 @@ Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
 plt.contourf(xx, yy, Z, cmap=cmapa)
 
-# Cria um cmap para a previsão.
-cmap_pred=[]
-cmap_pred.append(cmap_bold[int(y_pred)])
 
 # Plotagem
-sns.scatterplot(
-    x=X_nca[:, 0],
-    y=X_nca[:, 1],
-    marker='o',
-    hue=y,
-    palette=cmapa,
-    alpha=1.0,
-    edgecolor="black",)
-# Plot a predict point
-sns.scatterplot(
-    legend=False,
-    x=X_test_nca[:,0],
-    y=X_test_nca[:,1],
-    marker="X",
-    s=90,
-    hue=y_pred,
-    palette=cmap_pred,
-    alpha=1.0,
-    edgecolor="black",)
+def plotConfig():
+    print(set(y))
+    sns.scatterplot(
+        x=X_nca[:, 0],
+        y=X_nca[:, 1],
+        marker='o',
+        hue=y,
+        palette=cmapa,
+        alpha=1.0,
+        edgecolor="black",)
+    # Plot a predict point
+    sns.scatterplot(
+        legend=False,
+        x=X_test_nca[:,0],
+        y=X_test_nca[:,1],
+        marker="X",
+        s=90,
+        hue=y_pred,
+        palette=cmap_pred,
+        alpha=1.0,
+        edgecolor="black",)
 #Desenha
-plt.xlim(xx.min(), xx.max())
-plt.ylim(yy.min(), yy.max())
-plt.title("Classificação e previsão de caractere numérico \n "
-          "(k = %i, weights = '%s', nº previsto = '%s')" % (n_neighbors, 'uniform', y_pred))
-plt.xlabel(y[0])
-plt.ylabel(y[1])
-plt.show()
+def plot():
+    plt.xlim(xx.min(), xx.max())
+    plt.ylim(yy.min(), yy.max())
+    plt.title("Classificação e previsão de caractere numérico \n "
+              "(k = %i, weights = '%s', nº previsto = '%s')" % (n_neighbors, 'uniform', y_pred))
+    plt.xlabel(y[0])
+    plt.ylabel(y[1])
+    plt.show()
+
+plotConfig()
+plot()
