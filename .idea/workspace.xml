@@ -48,7 +48,7 @@
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Predictor 0.1">
+  <component name="RunManager" selected="Python.Testador 0.1">
     <configuration name="Predictor 0.1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,7 +175,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="treinoTestar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testador alternativo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -183,11 +183,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 02" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 01/treinoTestar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 02/testador alternativo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Predictor 0.1" />
-        <item itemvalue="Python.reducaoVetor (1)" />
         <item itemvalue="Python.Testador 0.1" />
+        <item itemvalue="Python.Predictor 0.1" />
         <item itemvalue="Python.Treinador 0.1" />
-        <item itemvalue="Python.treinoTestar" />
+        <item itemvalue="Python.testador alternativo" />
+        <item itemvalue="Python.reducaoVetor (1)" />
       </list>
     </recent_temporary>
   </component>
