@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
+from sklearn import neighbors
 
 # Parametros
 url_data = 'dataset/optdigits.tes'
@@ -19,6 +20,7 @@ trickbag = joblib.load(open(url_predictor, 'rb'))
 predictor = trickbag.named_steps['regressor']
 preprocessor = trickbag.named_steps['preprocessor']
 knc = trickbag.named_steps['knc']
+knc2 = neighbors.KNeighborsClassifier(n_neighbors, weights='uniform')
 
 # Importar o conjunto de dados para Previsão
 dataset = pd.read_csv(url_data, sep=',', header=None)
@@ -34,11 +36,12 @@ print(y_pred)
 
 
 # Define pontos na malha em cada 'peso' para ... [x_min, x_max]x[y_min, y_max].
+knc2.fit(x_pred,y_pred)
 x_min, x_max = x_pred[:, 0].min() - 1, x_pred[:, 0].max() + 1
 y_min, y_max = x_pred[:, 1].min() - 1, x_pred[:, 1].max() + 1
 xx, yy = np.meshgrid(np.arange(x_min, x_max, grid), np.arange(y_min, y_max, grid))
 # ... Abrir , pintar e fechar ela.
-Z = knc.predict(np.c_[xx.ravel(), yy.ravel()]).astype(int)
+Z = knc2.predict(np.c_[xx.ravel(), yy.ravel()]).astype(int)
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
 plt.contourf(xx, yy, Z, cmap=cmapa)
