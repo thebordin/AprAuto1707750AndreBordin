@@ -48,7 +48,7 @@
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Testador 0.1">
+  <component name="RunManager" selected="Python.Predictor 0.1">
     <configuration name="Predictor 0.1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,9 +198,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Testador 0.1" />
         <item itemvalue="Python.Predictor 0.1" />
         <item itemvalue="Python.Treinador 0.1" />
+        <item itemvalue="Python.Testador 0.1" />
         <item itemvalue="Python.testador alternativo" />
         <item itemvalue="Python.reducaoVetor (1)" />
       </list>
