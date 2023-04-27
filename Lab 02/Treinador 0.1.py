@@ -48,7 +48,7 @@ y = y_raw[64].values.tolist()
 # Treinar o motor e reduzir x_raw
 x_nca = preprocessor.fit_transform(x_raw, y) # Treina redução
 regressor.fit(x_nca,y) # Treina o predictor
-knc.fit(x_nca,y) # Define os agrupamentos e coloração do grafico após o treinamento
+knc.fit(x_nca,y) # Treina os agrupamentos do grafico
 
 # Define pontos na malha para ... [x_min, x_max]x[y_min, y_max].
 x_min, x_max = x_nca[:, 0].min() - 1, x_nca[:, 0].max() + 1

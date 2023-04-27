@@ -32,8 +32,10 @@ x_pred = preprocessor.transform(x_pred_raw)
 
 # Fazer a previsão para a observação de teste
 y_pred = predictor.predict(x_pred).astype(int)
-print(y_pred)
 
+# Dá o score (USELESS)#####################################################################################
+score = knc.score(x_pred,y_pred)
+print('Score do K Neighbous Classifier(Knc.score): %.2f'% (score))
 
 # Define pontos na malha em cada 'peso' para ... [x_min, x_max]x[y_min, y_max].
 knc2.fit(x_pred,y_pred)

@@ -32,7 +32,8 @@ y_test = xy_test_raw.iloc[:limite, 64:65]
 # Reduzir as dimensões das entradas fazer a previsao e ver a eficacia
 x_nca=preprocessor.transform(x_test)
 y_predicted = predictor.predict(x_nca).astype(int)
-print(y_predicted,'\n',  y_test)
+print(knc.score(x_nca,y_test))
+'''print(y_predicted,'\n',  y_test)
 match=y_predicted-np.array(y_test)
 right = 0
 wrong = 0
@@ -42,8 +43,9 @@ for i in match[64]:
     total=total+1
     if z==0:
         right += 1
-    else: wrong +=1
-print('Frequencia de Certos:', right/total, 'Frequencia de errados:', wrong/total)
+    else: wrong +=1'''
+score = knc.score(x_nca,y_test)
+print('Score do K Neighbous Classifier(Knc.score): %.2f'% (score*100))
 
 # Define pontos na malha em cada para ... [x_min, x_max]x[y_min, y_max].
 knc2.fit(x_nca,y_predicted)
@@ -70,5 +72,5 @@ sns.scatterplot(
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("Classificacao e previsao de caractere numerico\n"
-          "(K = %i, weights = '%s', Eficiencia: %.2f%%)" % (n_neighbors, 'uniform', right/total*100))
+          "(K = %i, weights = '%s', Eficiencia: %.2f%%)" % (n_neighbors, 'uniform', score*100))
 plt.show()

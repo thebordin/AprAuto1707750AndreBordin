@@ -77,7 +77,6 @@ plt.contourf(xx, yy, Z, cmap=cmapa)
 
 # Plotagem
 def plotConfig():
-    print(set(y))
     sns.scatterplot(
         x=X_nca[:, 0],
         y=X_nca[:, 1],
