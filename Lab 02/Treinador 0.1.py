@@ -4,9 +4,10 @@ from sklearn.neighbors import NeighborhoodComponentsAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import matplotlib.colors as mcolors
 import seaborn as sns
 from sklearn import neighbors
-from sklearn import linear_model
 import joblib
 
 #Treinamento full
@@ -18,11 +19,15 @@ limite,url_predictor = 500,'dataset/character_macro_predictor_useless'
 url_train='dataset/optdigits.tra'
 url_test='dataset/optidigits.tes'
 n_neighbors = 12
-grid = 2
+grid = 1
 pesos = ["uniform"]
-cmapa=sns.color_palette('BrBG',n_colors=10, as_cmap=True)
+#cmaps
+cmap = plt.cm.get_cmap('BrBG', 10)
+cmap_list = [cmap(i) for i in range(cmap.N)]
+cmap_list_hex = [mcolors.to_hex(cmap_list[i]) for i in range(len(cmap_list))]
+cmapa = ListedColormap(cmap_list_hex)
 
-#Setup
+### Setup ###
 # Criar o pipeline com as etapas de pré-processamento e modelo
 trickbag = Pipeline([
     ('preprocessor', Pipeline(steps=[
@@ -30,11 +35,12 @@ trickbag = Pipeline([
         ('nca', NeighborhoodComponentsAnalysis(n_components=2))
     ])),
     ('knc', neighbors.KNeighborsClassifier(n_neighbors, weights='uniform')),
-    ('regressor', linear_model.LinearRegression())
+    ('cmapahex', cmap_list_hex),
+    ('cmapa', cmapa)
 ])
 preprocessor = trickbag.named_steps['preprocessor']
 knc = trickbag.named_steps['knc']
-regressor = trickbag.named_steps['regressor']
+### FIM SETUP ###
 
 # Importar o conjunto de dados para Treino
 dataset = pd.read_csv(url_train, sep=',', header=None)
@@ -47,18 +53,17 @@ y = y_raw[64].values.tolist()
 
 # Treinar o motor e reduzir x_raw
 x_nca = preprocessor.fit_transform(x_raw, y) # Treina redução
-regressor.fit(x_nca,y) # Treina o predictor
-knc.fit(x_nca,y) # Treina os agrupamentos do grafico
+knc.fit(x_nca,y) # Treina os agrupamentos do grafico e preditor
 
 # Define pontos na malha para ... [x_min, x_max]x[y_min, y_max].
 x_min, x_max = x_nca[:, 0].min() - 1, x_nca[:, 0].max() + 1
 y_min, y_max = x_nca[:, 1].min() - 1, x_nca[:, 1].max() + 1
 xx, yy = np.meshgrid(np.arange(x_min, x_max, grid), np.arange(y_min, y_max, grid))
 # ... Abrir , pintar e fechar ela.
-Z = knc.predict(np.c_[xx.ravel(), yy.ravel()]).astype(int)
+Z = knc.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
-plt.contourf(xx, yy, Z, cmap=cmapa)
+plt.pcolormesh(xx, yy, Z, cmap=cmapa)
 
 # Plotagem
 sns.scatterplot(
@@ -68,7 +73,7 @@ sns.scatterplot(
     hue=y,
     palette=cmapa,
     alpha=1.0,
-    edgecolor="black")
+    edgecolor="w")
 #Desenha
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
