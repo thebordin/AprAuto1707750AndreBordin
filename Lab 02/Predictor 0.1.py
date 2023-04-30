@@ -19,8 +19,8 @@ rng = np.random.randint(0, limite-200)
 trickbag = joblib.load(open(url_predictor, 'rb'))
 preprocessor = trickbag.named_steps['preprocessor']
 knc = trickbag.named_steps['knc']
-cmapahex = trickbag.named_steps['cmapahex']
 cmapa = trickbag.named_steps['cmapa']
+#Fim Setup
 
 # Importar o conjunto de dados para Previsão
 dataset = pd.read_csv(url_data, sep=',', header=None)
@@ -49,9 +49,10 @@ sns.scatterplot(
     y=x_pred[:, 1],
     marker='X',
     hue=y_pred.ravel(),
-    palette=cmapahex,
+    palette=cmapa,
     alpha=1.0,
-    edgecolor="black")
+    edgecolor="black",
+    legend = 'full')####################>>>> MOSTRA TODAS AS ENTRADAS NO MAPA
 
 # Desenha
 plt.xlim(xx.min(), xx.max())

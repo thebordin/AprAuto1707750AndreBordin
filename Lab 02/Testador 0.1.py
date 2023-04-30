@@ -19,8 +19,8 @@ grid = 2
 trickbag = joblib.load(open(url_predictor, 'rb'))
 preprocessor = trickbag.named_steps['preprocessor']
 knc = trickbag.named_steps['knc']
-cmapahex = trickbag.named_steps['cmapahex']
 cmapa = trickbag.named_steps['cmapa']
+#Fim Setup
 
 # Importar o conjunto de dados para Teste
 dataset = pd.read_csv(url_test, sep=',', header=None)
@@ -53,9 +53,10 @@ sns.scatterplot(
     y=x_nca[:, 1],
     marker='o',
     hue=y_predicted.ravel(),
-    palette=cmapahex,
+    palette=cmapa,
     alpha=1.0,
-    edgecolor="red")
+    edgecolor="red",
+    legend = 'full')####################>>>> MOSTRA TODAS AS ENTRADAS NO MAPA
 
 #Desenha
 plt.xlim(xx.min(), xx.max())

@@ -19,8 +19,7 @@ y=np.array(Y)
 h = 0.02 # step size in the mesh
 
 # Create color maps
-cmap_light = ListedColormap(['silver', 'sandybrown', 'darksalmon', 'white','bisque','moccasin','palegreen','paleturquoise','deepskyblue', 'm'])
-cmap_bold = ['darkorchid','blue','darkcyan','darkgreen','darkkhaki','gold','sienna','red','black','navy']
+cmapa = plt.colormaps['BrBG']
 
 #for weights in ["uniform", "distance"]:
 clf = neighbors.KNeighborsClassifier(n_neighbors, weights="uniform")
@@ -33,15 +32,16 @@ Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 # Put the result into a color plot
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
-plt.contourf(xx, yy, Z, cmap=cmap_light)
+plt.pcolormesh(xx, yy, Z, cmap=cmapa)
 # Plot also the training points
 sns.scatterplot(
     x=X[:, 0],
     y=X[:, 1],
     hue=Y,
-    palette=cmap_bold,
+    palette=cmapa,
     alpha=1.0,
-    edgecolor="black",)
+    edgecolor="black",
+    legend = 'full')
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("3-Class classification (k = %i, weights = '%s')" % (n_neighbors, "uniform"))
@@ -58,7 +58,7 @@ sns.scatterplot(
     marker="X",
     s=90,
     hue=Y,
-    palette=cmap_bold,
+    palette=cmapa,
     alpha=1.0,
-    edgecolor="w",)
+    edgecolor="w")
 plt.show()

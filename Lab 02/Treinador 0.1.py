@@ -22,10 +22,7 @@ n_neighbors = 12
 grid = 1
 pesos = ["uniform"]
 #cmaps
-cmap = plt.cm.get_cmap('BrBG', 10)
-cmap_list = [cmap(i) for i in range(cmap.N)]
-cmap_list_hex = [mcolors.to_hex(cmap_list[i]) for i in range(len(cmap_list))]
-cmapa = ListedColormap(cmap_list_hex)
+cmapa = plt.colormaps['BrBG']
 
 ### Setup ###
 # Criar o pipeline com as etapas de pré-processamento e modelo
@@ -35,7 +32,6 @@ trickbag = Pipeline([
         ('nca', NeighborhoodComponentsAnalysis(n_components=2))
     ])),
     ('knc', neighbors.KNeighborsClassifier(n_neighbors, weights='uniform')),
-    ('cmapahex', cmap_list_hex),
     ('cmapa', cmapa)
 ])
 preprocessor = trickbag.named_steps['preprocessor']
@@ -73,7 +69,8 @@ sns.scatterplot(
     hue=y,
     palette=cmapa,
     alpha=1.0,
-    edgecolor="w")
+    edgecolor="w",
+    legend = 'full') ####################>>>> MOSTRA TODAS AS ENTRADAS NO MAPA
 #Desenha
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
