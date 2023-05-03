@@ -11,13 +11,12 @@ from sklearn import neighbors
 import joblib
 
 #Treinamento full
-limite,url_predictor = 3823,'dataset/character_macro_predictor'
+limite,url_predictor = 3823,'dataset/trickbag'
 #teste
-limite,url_predictor = 500,'dataset/character_macro_predictor_useless'
+limite,url_predictor = 500,'dataset/trickbag_useless'
 
 #Parametros
 url_train='dataset/optdigits.tra'
-url_test='dataset/optidigits.tes'
 n_neighbors = 12
 grid = 1
 pesos = ["uniform"]
@@ -69,7 +68,7 @@ sns.scatterplot(
     hue=y,
     palette=cmapa,
     alpha=1.0,
-    edgecolor="w",
+    edgecolor="gray",
     legend = 'full') ####################>>>> MOSTRA TODAS AS ENTRADAS NO MAPA
 #Desenha
 plt.xlim(xx.min(), xx.max())

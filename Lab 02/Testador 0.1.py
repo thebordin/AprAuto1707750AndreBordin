@@ -9,7 +9,7 @@ from sklearn import neighbors
 
 #Parametros
 url_test='dataset/optdigits.tes'
-url_predictor='dataset/character_macro_predictor'
+url_predictor='dataset/trickbag'
 limite= 1797
 n_neighbors = 12
 grid = 2

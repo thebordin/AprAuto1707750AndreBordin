@@ -8,7 +8,7 @@ from matplotlib.colors import ListedColormap
 
 # Parametros
 url_data = 'dataset/optdigits.tes'
-url_predictor = 'dataset/character_macro_predictor'
+url_predictor = 'dataset/trickbag'
 limite = 1797
 n_neighbors = 12
 grid = 2
