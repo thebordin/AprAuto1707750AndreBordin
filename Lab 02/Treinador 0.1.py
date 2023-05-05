@@ -4,8 +4,6 @@ from sklearn.neighbors import NeighborhoodComponentsAnalysis
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
-import matplotlib.colors as mcolors
 import seaborn as sns
 from sklearn import neighbors
 import joblib
