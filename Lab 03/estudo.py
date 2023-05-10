@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 import matplotlib.pyplot as plt
-import seaborn as sns
 import joblib
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
