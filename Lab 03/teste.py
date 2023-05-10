@@ -1,15 +1,8 @@
-import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
-from sklearn.decomposition import PCA
 
 #Parametros
 url_predictor='data/trickbag'
-proporcao_treino_teste = 0.33
-rdm_state = 42
-clusters = 10
-max_iter = 300 #Default : 300
 
 #Setup
 #Carregando o predictor e separando suas funções:
