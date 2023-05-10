@@ -52,26 +52,46 @@ pca = trickbag.named_steps['pca']
 
 #Treinamento e criação de Clusters
 y_pred = kmeans.fit_predict(features)
-print(np.unique(y_pred))
+
+#Score
+
 #Treinamento e transformação de x em PCA
 x_pca = pca.fit_transform(features)
 
-#Primeiro plot:
+#Simulando Nº errados de clusters com K calculado por KMeans :
 plt.figure(figsize=(12,12))
+kmw = KMeans(n_clusters= 2, init=kmeans_plusplus,random_state=rdm_state, n_init= 'auto',max_iter=max_iter)
+y_pred_wrong_k = kmw.fit_predict(features)
 plt.subplot(221)
 plt.scatter(x=x_pca[:,0],
             y=x_pca[:,1],
-            c=y_pred,
-            marker='o',
-            linewidths=1,
-            edgecolors='black',)
-centroids = kmeans.cluster_centers_
-print(centroids)
+            c=y_pred_wrong_k)
+centroids = kmw.cluster_centers_
 plt.scatter(centroids[:,0], centroids[:,1],
-            marker='x',
-            s=90,
+            marker='*',
+            s=360,
             linewidths=1,
-            color='pink',
+            color='green',
             edgecolors='black',)
-plt.title('Numero incorreto de clusters.')
+plt.title('Numero incorreto de clusters.(2)')
+
+#Plotando distribuição Anisotrópica
+#Ajustando o modelo
+transformation = [[0.60834549,-0.63667341],[-0.40887718,0.85253229]]
+x_pca_aniso = np.dot(x_pca, transformation)
+y_pred_aniso = kmeans.fit_predict(x_pca_aniso)
+#plotando
+plt.subplot(222)
+plt.scatter(x=x_pca_aniso[: , 0],
+            y=x_pca_aniso[:, 1],
+            c=y_pred_aniso,)
+centroids = kmeans.cluster_centers_
+plt.scatter(x=centroids[:, 0],
+            y=centroids[:, 1],
+            marker='*',
+            s=360,
+            color='green',)
+plt.title('Distribuição anisotrópica da Inferência.')
+print(y_pred_aniso)
+#
 plt.show()
