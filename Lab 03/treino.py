@@ -6,12 +6,12 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 
-#||||||||| SETUP ||||||||||# Espera-se score de 0.016
-url_predictor = 'data/trickbag'
+#||||||||| SETUP ||||||||||#
+url_predictor = 'data/Preditor'
 data1 = 'data/optdigits.tra'
 data2 = 'data/optdigits.tes'
 proporcao_treino_teste = 0.33
-rdm_state = 42
+rdm_state = 42 #Max 42
 clusters = 10
 max_iter = 300 #Default : 300
 #########FIM SETUP##########
@@ -23,8 +23,7 @@ dataset = pd.concat([pd.read_csv(data1, sep = ',', header=None),
 features, features_teste, labels, labels_teste = train_test_split(dataset.iloc[:,:64],
                                                                   dataset.iloc[:,64:65],
                                                                   test_size=proporcao_treino_teste,
-                                                                  random_state=42)
-
+                                                                  random_state=rdm_state)
 
 #-MODELO-#
 trickbag = Pipeline([
@@ -42,16 +41,18 @@ kmeans = trickbag.named_steps['kmeans']
 pca = trickbag.named_steps['pca']
 #-FimModelo-#
 
-#Treinamento e criação de Clusters
-y_pred = kmeans.fit_predict(features)
-print(features , '\n', features_teste)
 #Treinamento e transformação de x em PCA
-x_pca = pca.fit_transform(features)
+feat_pca = pca.fit_transform(features)
 
+#Treinamento e criação de Clusters
+label_pred = kmeans.fit_predict(feat_pca)
+
+#Apresentando o Score:
+print('Score do modelo: ',kmeans.score(feat_pca))
 #Montando o plot e definindo os Centroids:
-plt.scatter(x=x_pca[:,0],
-            y=x_pca[:,1],
-            c=y_pred)
+plt.scatter(x=feat_pca[:,0],
+            y=feat_pca[:,1],
+            c=label_pred)
 centroids = kmeans.cluster_centers_
 plt.scatter(centroids[:,0], centroids[:,1],
             marker='*',
@@ -61,7 +62,6 @@ plt.scatter(centroids[:,0], centroids[:,1],
             edgecolors='black',)
 plt.title('Disperssão de bolhas por KMeans')
 plt.show()
-
 #Gravar o predictor.
 predictor_file= open(url_predictor, 'wb')
 joblib.dump(trickbag, predictor_file)

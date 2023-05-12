@@ -11,7 +11,7 @@ import joblib
 #Treinamento full
 limite,url_predictor = 3823,'dataset/trickbag'
 #teste
-limite,url_predictor = 500,'dataset/trickbag_useless'
+#limite,url_predictor = 500,'dataset/trickbag_useless'
 
 #Parametros
 url_train='dataset/optdigits.tra'

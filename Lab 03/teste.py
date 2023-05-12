@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 #Parametros
-url_predictor='data/trickbag'
+url_predictor='data/Preditor'
 
 #Setup
 #Carregando o predictor e separando suas funções:
@@ -13,15 +13,15 @@ features_teste = trickbag.named_steps['features_teste']
 labels_teste = trickbag.named_steps['labels_teste']
 #Fim Setup
 
-#Treinamento e criação de Clusters
-y_pred = kmeans.predict(features_teste)
-
 #Treinamento e transformação de x em PCA
-x_pca = pca.transform(features_teste)
+feat_pca = pca.transform(features_teste)
+
+#Predição de Clusters
+y_pred = kmeans.predict(feat_pca)
 
 #Montando o plot e definindo os Centroids:
-plt.scatter(x=x_pca[:,0],
-            y=x_pca[:,1],
+plt.scatter(x=feat_pca[:,0],
+            y=feat_pca[:,1],
             c=y_pred)
 centroids = kmeans.cluster_centers_
 plt.scatter(centroids[:,0], centroids[:,1],
