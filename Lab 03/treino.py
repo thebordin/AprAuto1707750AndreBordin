@@ -35,10 +35,12 @@ trickbag = Pipeline([
     ('pca', PCA(n_components=2,
                 random_state=rdm_state)),
     ('features_teste', features_teste),
-    ('labels_teste', labels_teste)
+    ('labels_teste', labels_teste),
+    ('plot_title', ('Disperssão de bolhas por KMeans\nTreino/Teste=%.2f%%, Clusters=%d, Random State=%d, Max iter=%d'% (((1-proporcao_treino_teste)*100),clusters,rdm_state,max_iter)))
 ])
 kmeans = trickbag.named_steps['kmeans']
 pca = trickbag.named_steps['pca']
+plot_title = trickbag.named_steps['plot_title']
 #-FimModelo-#
 
 #Treinamento e transformação de x em PCA
@@ -49,6 +51,7 @@ label_pred = kmeans.fit_predict(feat_pca)
 
 #Apresentando o Score:
 print('Score do modelo: ',kmeans.score(feat_pca))
+
 #Montando o plot e definindo os Centroids:
 plt.scatter(x=feat_pca[:,0],
             y=feat_pca[:,1],
@@ -60,7 +63,7 @@ plt.scatter(centroids[:,0], centroids[:,1],
             linewidths=1,
             color='green',
             edgecolors='black',)
-plt.title('Disperssão de bolhas por KMeans')
+plt.title(plot_title)
 plt.show()
 #Gravar o predictor.
 predictor_file= open(url_predictor, 'wb')

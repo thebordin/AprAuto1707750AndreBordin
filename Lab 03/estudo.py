@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.cluster import kmeans_plusplus
 
 #Treinamento full
-limite,url_predictor = 5620,'dataset/trickbag'
+limite,url_predictor = 5620,'dataset/Preditor'
 #teste
 #limite,url_predictor = 500,'dataset/trickbag_useless'
 
