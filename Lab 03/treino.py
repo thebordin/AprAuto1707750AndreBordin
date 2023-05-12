@@ -27,36 +27,38 @@ features, features_teste, labels, labels_teste = train_test_split(dataset.iloc[:
 
 #-MODELO-#
 trickbag = Pipeline([
-    ('kmeans', KMeans(n_clusters= clusters,
+    ('preprocessor', Pipeline(steps=[
+        ('pca', PCA(n_components=2,
+                random_state=rdm_state)),
+        ('kmeans', KMeans(n_clusters= clusters,
                       init='k-means++',
                       random_state=rdm_state,
                       n_init= 'auto',
-                      max_iter=max_iter)),
-    ('pca', PCA(n_components=2,
-                random_state=rdm_state)),
+                      max_iter=max_iter)),])),
     ('features_teste', features_teste),
     ('labels_teste', labels_teste),
-    ('plot_title', ('Disperssão de bolhas por KMeans\nTreino/Teste=%.2f%%, Clusters=%d, Random State=%d, Max iter=%d'% (((1-proporcao_treino_teste)*100),clusters,rdm_state,max_iter)))
+    ('plot_title', ('Disperssão de bolhas por KMeans\nTreino/Teste=%.0f%%/%.0f%%, Clusters=%d, Random State=%d, Max iter=%d'% (((1-proporcao_treino_teste)*100),((proporcao_treino_teste)*100),clusters,rdm_state,max_iter)))
 ])
-kmeans = trickbag.named_steps['kmeans']
-pca = trickbag.named_steps['pca']
+preprocessor = trickbag.named_steps['preprocessor']
 plot_title = trickbag.named_steps['plot_title']
 #-FimModelo-#
 
 #Treinamento e transformação de x em PCA
-feat_pca = pca.fit_transform(features)
+feat_pca = preprocessor.fit_transform(features)
+#feat_pca = preprocessor.named_steps['pca'].fit_transform(features)
 
 #Treinamento e criação de Clusters
-label_pred = kmeans.fit_predict(feat_pca)
+#label_pred = preprocessor.named_steps['kmeans'].fit_predict(feat_pca)
+label_pred = preprocessor.fit_predict(feat_pca)
 
 #Apresentando o Score:
-print('Score do modelo: ',kmeans.score(feat_pca))
+print('Score do modelo: ',preprocessor.score(feat_pca))
 
 #Montando o plot e definindo os Centroids:
 plt.scatter(x=feat_pca[:,0],
             y=feat_pca[:,1],
             c=label_pred)
-centroids = kmeans.cluster_centers_
+centroids = preprocessor.named_steps['kmeans'].cluster_centers_
 plt.scatter(centroids[:,0], centroids[:,1],
             marker='*',
             s=360,
