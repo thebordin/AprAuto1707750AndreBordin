@@ -66,7 +66,6 @@ plt.subplot(221)
 plt.scatter(x=feat_pca_pipe[:,0], #<<<<<<<<<<<<<< DADOS ERRADOS.... ELE SÓ USA 2/10 COLUNAS
             y=feat_pca_pipe[:,1],
             c=label_pred)
-
 plt.title(plot_title +'\n!!!!!!WRONG FULL PIPE!!!!!!')
 plt.subplot(224)
 plt.scatter(x=feat_pca[:,0],
@@ -81,6 +80,7 @@ plt.scatter(centroids[:,0], centroids[:,1],
             edgecolors='black',)
 plt.title(plot_title+'\nSTEPS')
 plt.show()
+
 #Gravar o predictor.
 predictor_file= open(url_predictor, 'wb')
 joblib.dump(trickbag, predictor_file)
