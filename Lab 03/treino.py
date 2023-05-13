@@ -49,7 +49,7 @@ feat_pca_pipe = trick.transform(features)
 feat_pca = trick['pca'].transform(features)
 print('PIPE: \n',feat_pca_pipe[0:1],'\nSTEPS:\n', feat_pca[0:1]) #>>>>>>>>>> PORQUE O PIPELINE INTEIRO GERA RESULTADO DIFERENTE ?
 
-feat_pca_kmeans = trick['kmeans'].transform(feat_pca) #Transform X to a cluster-distance space with 10 COLUMNS
+feat_pca_kmeans = trick['kmeans'].transform(feat_pca)
 
 print('PIPE: \n',feat_pca_pipe[0:1],'\nSTEPS:\n', feat_pca_kmeans[0:1]) #>>>>>>>>>> PORQUE ELE PASSA POR 2 TRANSFORMACOES : PCA E KMEANS !!!!!
 
