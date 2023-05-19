@@ -36,7 +36,6 @@ sheepherd = KMeans(n_clusters= clusters,
 trickbag = Pipeline([
     ('trick', Pipeline(steps=[('pca', preprocessor),('kmeans', sheepherd)])),
     ('features_teste', features_teste),
-    ('labels_teste', labels_teste),
     ('plot_title', ('Disperssão de bolhas por KMeans\nTreino/Teste=%.0f%%/%.0f%%\nClusters=%d, Random State=%d, Max iter=%d'% (((1-proporcao_treino_teste)*100),((proporcao_treino_teste)*100),clusters,rdm_state,max_iter)))
 ])
 trick = trickbag['trick']

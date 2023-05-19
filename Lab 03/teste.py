@@ -9,7 +9,6 @@ url_predictor='data/Preditor'
 trickbag = joblib.load(open(url_predictor, 'rb'))
 trick = trickbag['trick']
 features_teste = trickbag['features_teste']
-labels_teste = trickbag['labels_teste']
 plot_title = trickbag['plot_title']
 #Fim Setup
 
@@ -17,15 +16,16 @@ plot_title = trickbag['plot_title']
 feat_pca = trick['pca'].transform(features_teste)
 
 #Predição de Clusters
-y_pred = trick.predict(features_teste)
+label_pred = trick.predict(features_teste)
 
 #Apresentando o Score:
 print('Score do modelo: ',trick.score(features_teste))
 
 #Montando o plot e definindo os Centroids:
+plt.figure(figsize=(5,6))
 plt.scatter(x=feat_pca[:,0],
             y=feat_pca[:,1],
-            c=y_pred)
+            c=label_pred)
 centroids = trick['kmeans'].cluster_centers_
 plt.scatter(centroids[:,0], centroids[:,1],
             marker='*',
