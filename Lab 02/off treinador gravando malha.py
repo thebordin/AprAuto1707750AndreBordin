@@ -11,7 +11,7 @@ import joblib
 #Treinamento full
 limite,url_predictor = 3823,'dataset/trickbag_mesh'
 #teste
-#limite,url_predictor = 500,'dataset/trickbag_mesh_useless'
+limite,url_predictor = 500,'dataset/trickbag_mesh_useless'
 
 #Parametros
 url_train='dataset/optdigits.tra'
@@ -55,12 +55,27 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, grid), np.arange(y_min, y_max, grid
 # ... Abrir , pintar e fechar ela.
 Z = knc.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
-plt.figure(figsize=(8, 6))
-colormesh = plt.pcolormesh(xx, yy, Z, cmap=cmapa)
+'''
 trickbag.steps.append(['xx', xx])
 trickbag.steps.append(['yy', yy])
-trickbag.steps.append(['Z', Z])
-
+trickbag.steps.append(['Z', Z])'''
+trickbag.steps.append(['mesh', Pipeline(steps=[(plt.figure(figsize=(8, 6))),
+                                               (plt.pcolormesh(xx, yy, Z, cmap=cmapa)),
+                                               (sns.scatterplot(
+                                                x=x_nca[:, 0],
+                                                y=x_nca[:, 1],
+                                                marker='o',
+                                                hue=y,
+                                                palette=cmapa,
+                                                alpha=1.0,
+                                                edgecolor="gray",
+                                                legend = 'full')),
+                                               (plt.xlim(xx.min(), xx.max())),
+                                               (plt.ylim(yy.min(), yy.max())),
+                                               (plt.title("Classificação e previsão de caractere numérico \n "
+                                                         "(k = %i, weights = '%s')" % (n_neighbors, 'uniform'))),
+                                               (plt.show())
+                                               ]) ])
 # Plotagem
 sns.scatterplot(
     x=x_nca[:, 0],
@@ -72,11 +87,13 @@ sns.scatterplot(
     edgecolor="gray",
     legend = 'full') ####################>>>> MOSTRA TODAS AS ENTRADAS NO MAPA
 #Desenha
+
 plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 plt.title("Classificação e previsão de caractere numérico \n "
           "(k = %i, weights = '%s')" % (n_neighbors, 'uniform'))
 plt.show()
+
 #Gravar o predictor.
 predictor_file= open(url_predictor, 'wb')
 joblib.dump(trickbag, predictor_file)

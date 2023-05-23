@@ -5,7 +5,7 @@ import joblib
 
 #Parametros
 url_test='dataset/optdigits.tes'
-url_predictor='dataset/trickbag_mesh'
+url_predictor='dataset/trickbag_mesh_useless'
 limite= 1797
 n_neighbors = 12
 grid = 2
@@ -36,7 +36,7 @@ score = knc.score(x_nca,y_test)
 print('Score do K Neighbous Classifier(Knc.score): %.2f'% (score*100))
 
 # Define pontos na malha em cada para ... [x_min, x_max]x[y_min, y_max].
-plt.pcolormesh(xx, yy, Z, cmap=cmapa)
+trickbag['mesh']
 # Plotagem
 sns.scatterplot(
     x=x_nca[:, 0],

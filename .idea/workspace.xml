@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit" />
+    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh_useless" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh_useless" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 02/off testador malha gravada.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/off testador malha gravada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 02/off treinador gravando malha.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/off treinador gravando malha.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +54,7 @@
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.off testador malha gravada (1)">
+  <component name="RunManager" selected="Python.off treinador gravando malha (1)">
     <configuration name="Treinador" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,9 +204,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.off treinador gravando malha (1)" />
         <item itemvalue="Python.off testador malha gravada (1)" />
         <item itemvalue="Python.Treinador" />
-        <item itemvalue="Python.off treinador gravando malha (1)" />
         <item itemvalue="Python.off testador malha gravada" />
         <item itemvalue="Python.off treinador gravando malha" />
       </list>
