@@ -31,7 +31,7 @@ y_test = xy_test_raw.iloc[:limite, 64:65]
 x_nca=preprocessor.transform(x_test)
 y_predicted = knc.predict(x_nca)
 score = knc.score(x_nca,y_test)
-print('Score do K Neighbous Classifier(Knc.score): %.2f'% (score*100))
+print('Score do K Neighbours Classifier(Knc.score): %.2f'% (score*100))
 
 # Carrega a malha.
 pickle.load(open('dataset/mesh_background.fig.pickle', 'rb'))
