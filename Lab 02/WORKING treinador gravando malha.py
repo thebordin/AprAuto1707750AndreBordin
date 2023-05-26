@@ -32,8 +32,8 @@ trickbag = Pipeline([
     ('knc', neighbors.KNeighborsClassifier(n_neighbors, weights='uniform')),
     ('cmapa', cmapa),
 ])
-preprocessor = trickbag.named_steps['preprocessor']
-knc = trickbag.named_steps['knc']
+preprocessor = trickbag['preprocessor']
+knc = trickbag['knc']
 ### FIM SETUP ###
 
 # Importar o conjunto de dados para Treino
@@ -72,8 +72,6 @@ sns.scatterplot(
     alpha=1.0,
     edgecolor="gray",
     legend = 'full')
-plt.xlim(xx.min(), xx.max())
-plt.ylim(yy.min(), yy.max())
 plt.title("Classificação e previsão de caractere numérico \n "
          "(k = %i, weights = '%s')" % (n_neighbors, 'uniform'))
 plt.show()
