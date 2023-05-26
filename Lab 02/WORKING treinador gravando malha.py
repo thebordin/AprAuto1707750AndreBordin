@@ -57,9 +57,11 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, grid), np.arange(y_min, y_max, grid
 Z = knc.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
+
 # ...DESENHAR E IMPORTAR O MESHGRID.
 mesh = plt.pcolormesh(xx, yy, Z, cmap=cmapa)
 pickle.dump(mesh, open('dataset/mesh_background.fig.pickle', 'wb'))
+
 #Desenhar os pontos
 sns.scatterplot(
     x=x_nca[:, 0],
