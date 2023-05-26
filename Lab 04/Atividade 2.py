@@ -11,10 +11,11 @@ url_trickbag = 'data/trickbag'
 
 ds_clean = pd.read_csv(url_ds_clean)
 trickbag = Pipeline([('StandartScaler', StandardScaler())])
+
 ds_clean.iloc[:,0:-1] = trickbag['StandartScaler'].fit_transform(ds_clean.iloc[:,0:-1])
 
 try:
-    ds_clean.to_csv(url_ds_scaled)
+    ds_clean.to_csv(url_ds_scaled, index = False)
 except: print('Houve um erro em importar o Dataset')
 
 try:

@@ -17,4 +17,3 @@ if cnt == 0:
     except: print('Houve um erro na gravação')
 else:
     print ('Dataset não salvo pois existem Missing Values')
-print( dataset)
