@@ -13,4 +13,4 @@ rng = int(random.random()*(len(dataset_teste)))
 amostra = pd.DataFrame(dataset_teste.iloc[rng,:-1]).T
 resultado = trickbag['MLPC'].predict(amostra)
 esperado = dataset_teste.iloc[rng,-1]
-print(f'Resultado da Previsão: {resultado} || Resultado Esperado: {esperado} || Linha: {rng+1}')
+print(f'Resultado da Previsão: {resultado} || Resultado Esperado: {esperado} || Linha: {rng}')
