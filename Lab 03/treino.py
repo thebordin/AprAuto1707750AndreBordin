@@ -11,7 +11,7 @@ url_predictor = 'data/Preditor'
 data1 = 'data/optdigits.tra'
 data2 = 'data/optdigits.tes'
 proporcao_treino_teste = 0.33
-rdm_state = 42 #Max 42
+rdm_state = 0 #Max 42
 clusters = 10
 max_iter = 300 #Default : 300
 #########FIM SETUP##########

@@ -32,8 +32,8 @@ trickbag = Pipeline([
     ('knc', neighbors.KNeighborsClassifier(n_neighbors, weights='uniform')),
     ('cmapa', cmapa),
 ])
-preprocessor = trickbag.named_steps['preprocessor']
-knc = trickbag.named_steps['knc']
+preprocessor = trickbag['preprocessor']
+knc = trickbag['knc']
 ### FIM SETUP ###
 
 # Importar o conjunto de dados para Treino
@@ -57,9 +57,11 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, grid), np.arange(y_min, y_max, grid
 Z = knc.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
 plt.figure(figsize=(8, 6))
+
 # ...DESENHAR E IMPORTAR O MESHGRID.
 mesh = plt.pcolormesh(xx, yy, Z, cmap=cmapa)
 pickle.dump(mesh, open('dataset/mesh_background.fig.pickle', 'wb'))
+
 #Desenhar os pontos
 sns.scatterplot(
     x=x_nca[:, 0],
@@ -70,8 +72,6 @@ sns.scatterplot(
     alpha=1.0,
     edgecolor="gray",
     legend = 'full')
-plt.xlim(xx.min(), xx.max())
-plt.ylim(yy.min(), yy.max())
 plt.title("Classificação e previsão de caractere numérico \n "
          "(k = %i, weights = '%s')" % (n_neighbors, 'uniform'))
 plt.show()
