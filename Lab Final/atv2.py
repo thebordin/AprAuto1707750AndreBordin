@@ -22,5 +22,5 @@ except: print('Houve um erro em importar o Dataset')
 try:
     trickbag_file = open(trickbag_url, 'wb')
     joblib.dump(trickbag,trickbag_file)
-    print('===== Modelo e Dataset Gravados =====')
+    print('===== Modelo SS e Dataset Gravados =====')
 except: print('Houve um erro em importar o Modelo StandardScaler')

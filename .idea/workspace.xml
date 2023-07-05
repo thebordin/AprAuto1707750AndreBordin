@@ -5,227 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/Lab Final/teste.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/Trabalho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/Trabalho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/tickbag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/lab04full.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/image_frame.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/ants.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/bb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/bees.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/cherry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/coffee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/deer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/nelore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/pineapple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/weed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/zebra.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_0.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_1.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_10.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_11.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_12.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_13.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_14.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_15.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_16.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_17.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_18.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_19.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_2.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_20.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_21.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_22.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_23.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_24.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_25.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_26.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_27.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_28.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_29.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_3.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_30.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_31.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_32.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_33.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_34.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_35.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_36.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_37.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_38.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_39.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_4.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_40.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_41.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_42.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_43.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_44.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_45.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_46.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_47.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_48.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_49.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_5.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_50.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_51.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_52.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_53.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_54.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_55.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_56.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_57.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_58.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_59.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_6.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_60.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_61.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_62.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_63.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_64.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_65.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_66.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_67.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_68.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_69.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_7.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_70.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_71.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_72.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_73.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_74.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_75.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_76.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_77.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_78.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_79.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_8.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_80.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_81.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_82.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_83.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_84.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_85.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_86.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_87.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_88.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_89.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_9.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_90.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_91.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_92.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_93.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_94.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_95.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_96.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_97.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_98.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_99.jpg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_43.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_45.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_46.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_47.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_48.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_49.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_53.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_56.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_57.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_58.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_59.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_60.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_61.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_62.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_63.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_65.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_66.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_67.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_68.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_69.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_70.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_71.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_72.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_73.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_74.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_75.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_76.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_77.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_78.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_79.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_81.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_82.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_83.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_84.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_85.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_86.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_87.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_88.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_89.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_90.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_91.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_92.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_93.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_94.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_95.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_96.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_97.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_98.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/split_images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,27 +127,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="WORKING testador malha gravada" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 02" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 02/WORKING testador malha gravada.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="colunasAleatorias" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -400,6 +169,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab Final" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/teste.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="treino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -424,10 +214,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Trabalho" />
+        <item itemvalue="Python.teste" />
         <item itemvalue="Python.Dataset 2" />
         <item itemvalue="Python.Full Program" />
         <item itemvalue="Python.treino" />
-        <item itemvalue="Python.WORKING testador malha gravada" />
       </list>
     </recent_temporary>
   </component>

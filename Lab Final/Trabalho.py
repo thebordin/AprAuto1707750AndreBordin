@@ -67,11 +67,11 @@ def IMAGEFRAME(images_raw, images_lined, images_frame):
     print(f'>MNinst salvo em {images_frame}\n')
     image_frame.show()
 
-IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_file)
+#IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_file)
 
 #################### Split
 print('>Separando a imagem:')
-split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
+#split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
 print('>Imagens separadas com sucesso.\n')
 
 #################### P2N
