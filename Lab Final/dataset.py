@@ -34,6 +34,7 @@ def build(contents):
         dataset=dataset+str(int(w4/3))
         if w != w_array[-1]:
             dataset=dataset+';'
+            
 
 
 count=0
@@ -47,7 +48,6 @@ for each in dir_list:
     count=count+1
     '''if count>=50: #
         break #'''
-
 ds = open(output, "w")
 ds.write(dataset)
 ds.close()

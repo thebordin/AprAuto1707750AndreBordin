@@ -7,8 +7,7 @@ from PIL import Image
 images_raw_loc = './input/'
 images_split_loc = './output/splited/'
 image_lined_loc = './output/lined/'
-image_frame_loc = './output/'
-image_frame_file = './output/image_frame.jpg'
+image_frame_file = './data/image_frame.jpg'
 p2n_loc = './output/output_text/'
 dataset_file = './output/dataset/dataset.csv'
 dataset_ss_file = './output/dataset/dataset_ss.csv'
@@ -64,22 +63,21 @@ def IMAGEFRAME(images_raw, images_lined, images_frame):
     for lines in frame:
         image_frame.paste(lines, (0, y_offset))
         y_offset += px
-    output_path = os.path.join(images_frame, 'image_frame.jpg')
-    image_frame.save(output_path)
-    print(f'>MNinst salvo em {output_path}\n')
+    image_frame.save(images_frame)
+    print(f'>MNinst salvo em {images_frame}\n')
     image_frame.show()
 
-#IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_loc)
+IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_file)
 
 #################### Split
 print('>Separando a imagem:')
-#split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
+split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
 print('>Imagens separadas com sucesso.\n')
 
 #################### P2N
 print('>Convertendo imagens em CSV:')
 order_p2n = 'python conversion_picture_to_numbers.py'
-#RAF(images_split_loc,p2n_loc,order_p2n)
+RAF(images_split_loc,p2n_loc,order_p2n)
 print('>Arquivos de imagem convertidos em csv com sucesso.\n')
 
 #################### Dataset
