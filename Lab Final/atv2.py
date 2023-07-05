@@ -12,11 +12,10 @@ dataset = pd.read_csv(input, header=None, sep=';')
 #### FIM PARAMETROS ####
 trickbag = Pipeline([('StandardScaler', StandardScaler())])
 
-#dataset_ss = trickbag['StandardScaler'].fit_transform(dataset)
-dataframe_ss = pd.DataFrame(trickbag['StandardScaler'].fit_transform(dataset))
-
+dataset.iloc[:,:-1] = pd.DataFrame(trickbag['StandardScaler'].fit_transform(dataset.iloc[:,0:-1]))
+print(dataset)
 try:
-    dataframe_ss.to_csv(output, index = False)
+    dataset.to_csv(output, index = False)
 except: print('Houve um erro em importar o Dataset')
 
 try:

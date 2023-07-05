@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Lab Final/teste.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 04/data/heart_train_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/heart_train_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 04/data/heart_validation_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/heart_validation_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 04/data/predictorMLPC_heart_4.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/predictorMLPC_heart_4.sav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/Trabalho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/Trabalho.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/atv2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/atv5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/conversion_picture_to_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/conversion_picture_to_numbers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/data/features_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_train.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/tickbag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/teste.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +69,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.Trabalho">
-    <configuration name="Dataset 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Atividade 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +81,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Dataset 2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Full Program" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Atividade 3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,7 +102,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Full Program.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Atividade 4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 04" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Atividade 5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 04" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,55 +216,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab Final" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/teste.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="treino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 03" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 03/treino.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Trabalho" />
-        <item itemvalue="Python.teste" />
-        <item itemvalue="Python.Dataset 2" />
-        <item itemvalue="Python.Full Program" />
-        <item itemvalue="Python.treino" />
+        <item itemvalue="Python.Atividade 5" />
+        <item itemvalue="Python.Atividade 4" />
+        <item itemvalue="Python.Atividade 3" />
+        <item itemvalue="Python.Atividade 2" />
       </list>
     </recent_temporary>
   </component>

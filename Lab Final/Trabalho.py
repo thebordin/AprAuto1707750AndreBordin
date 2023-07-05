@@ -14,9 +14,11 @@ dataset_ss_file = './output/dataset/dataset_ss.csv'
 trickbag_loc = './data/tickbag'
 features_train_loc = './data/features_train.csv'
 features_validation_loc = './data/features_validation.csv'
+labels_train_loc = './data/labels_train.csv'
+labels_validation_loc = './data/labels_validation.csv'
 predictor_loc = './MLPC/MLPCpredictor.sav'
 px = 25 # Pixels
-proporcao_treino = 0.3
+proporcao_treino = 0.2
 #################
 
 
@@ -67,11 +69,11 @@ def IMAGEFRAME(images_raw, images_lined, images_frame):
     print(f'>MNinst salvo em {images_frame}\n')
     image_frame.show()
 
-#IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_file)
+IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_file)
 
 #################### Split
 print('>Separando a imagem:')
-#split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
+split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
 print('>Imagens separadas com sucesso.\n')
 
 #################### P2N
@@ -80,7 +82,7 @@ order_p2n = 'python conversion_picture_to_numbers.py'
 RAF(images_split_loc,p2n_loc,order_p2n)
 print('>Arquivos de imagem convertidos em csv com sucesso.\n')
 
-#################### Dataset
+#################### Dataset adicionando Labels
 print('>Criando Dataset:')
 order_dataset = 'python dataset.py'
 order_out=order_dataset +' '+p2n_loc+' '+dataset_file
@@ -103,25 +105,21 @@ print('>Padronizacao de entradas concluido.\n')
 
 #################### Divisão do dataset entre treino e teste
 print('>Separação entre treino e teste:')
-order_ss = 'python atv3.py'
-order_out=order_ss +' '+dataset_ss_file+' '+trickbag_loc+' '+features_train_loc+' '+features_validation_loc+' '+str(proporcao_treino)
+order_train_test = 'python atv3.py'
+order_out=order_train_test +' '+dataset_ss_file+' '+trickbag_loc+' '+features_train_loc+' '+features_validation_loc+' '+str(proporcao_treino)
 os.system(order_out)
 print('>Separação entre treino e teste concluido.\n')
 
 #################### MLPC treino:
 print('>Treinando MLPC:')
-order_ss = 'python atv4.py'
-order_out=order_ss +' '+features_train_loc+' '+trickbag_loc+' '+predictor_loc
+order_mlpc = 'python atv4.py'
+order_out=order_mlpc +' '+features_train_loc+' '+trickbag_loc+' '+predictor_loc
 os.system(order_out)
 print('>Treino Concluído.\n')
 
 #################### Predictor:
 print('>Rodando o predictor MLPC:')
-order_ss = 'python atv5.py'
-order_out=order_ss +' '+features_validation_loc+' '+predictor_loc
+order_pred = 'python atv5.py'
+order_out=order_pred +' '+features_validation_loc+' '+predictor_loc
 os.system(order_out)
-print('>Treino Concluído.\n')
-
-
-
-
+print('>Predictor Concluído.\n')

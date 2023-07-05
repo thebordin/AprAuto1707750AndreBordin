@@ -20,6 +20,7 @@ for row in arr:
         tmp.append(str(col))
     lst.append(tmp)
 # 4. Save list of lists to CSV
+#print(lst)
 with open(output+file+'.csv', 'w') as f:
     for row in lst:
         f.write(','.join(row) + '\n')

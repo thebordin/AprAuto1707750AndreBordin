@@ -13,14 +13,15 @@ dataset = pd.read_csv(input, header=None, sep=';')
 #### FIM PARAMETROS ####
 
 dataset = pd.read_csv(input)
-
-trickbag.steps.append(['MLPC', MLPClassifier(hidden_layer_sizes=(150,100,50),
+features = dataset.iloc[:, :-1]
+labels = dataset.iloc[:,-1]
+trickbag.steps.append(['MLPC', MLPClassifier(hidden_layer_sizes=(75,100,75),
                                              max_iter=100000,
                                              activation= 'relu',
                                              solver='adam',
                                              random_state=rdm_state)])
 
-trickbag['MLPC'].fit(dataset)
+trickbag['MLPC'].fit(features,labels)
 try:
     trickbag_file = open(url_predictor, 'wb')
     joblib.dump(trickbag,trickbag_file)
