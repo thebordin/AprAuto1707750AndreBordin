@@ -8,7 +8,16 @@ images_raw_loc = './input/'
 images_split_loc = './output/splited/'
 image_lined_loc = './output/lined/'
 image_frame_loc = './output/'
-px = 250 # Pixels
+image_frame_file = './output/image_frame.jpg'
+p2n_loc = './output/output_text/'
+dataset_file = './output/dataset/dataset.csv'
+dataset_ss_file = './output/dataset/dataset_ss.csv'
+trickbag_loc = './data/tickbag'
+features_train_loc = './data/features_train.csv'
+features_validation_loc = './data/features_validation.csv'
+predictor_loc = './MLPC/MLPCpredictor.sav'
+px = 25 # Pixels
+proporcao_treino = 0.3
 #################
 
 
@@ -19,27 +28,10 @@ def RAF(input, output, order):
     dataset=""
     for name in dir_list:
         count =count+1
-        print(name,type(name))
         order_out=order +' '+input+' '+name+' '+output
         os.system(order_out)
     print("Files and directories in '", output, "' :")
-    print(dir_list)
-
-'''images_raw_list = os.listdir(images_raw_loc)
-count=0
-dataset=""
-for x in images_raw_list:
-    count =count+1
-    print(x,type(x))
-    order="python conversion_picture_to_numbers.py "+x
-    os.system(order)
-
-print("Files and directories in '", images_raw_loc, "' :")
-print(images_raw_loc)'''
-
-'''#################### Resize
-order_resize = 'python resize_image.py'
-RAF(images_raw_loc, images_resized_loc, order_resize)'''
+    print(os.listdir(output))
 
 #################### Busca as subpastas, redimensiona, cria as linhas e monta o MNist
 def IMAGEFRAME(images_raw, images_lined, images_frame):
@@ -74,14 +66,64 @@ def IMAGEFRAME(images_raw, images_lined, images_frame):
         y_offset += px
     output_path = os.path.join(images_frame, 'image_frame.jpg')
     image_frame.save(output_path)
-    print(f'>MNinst salvo em {output_path}')
+    print(f'>MNinst salvo em {output_path}\n')
     image_frame.show()
-IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_loc)
+
+#IMAGEFRAME(images_raw_loc, image_lined_loc, image_frame_loc)
+
+#################### Split
 print('>Separando a imagem:')
+#split_image(image_frame_file, 10, 10, False, False, False, output_dir=images_split_loc)
+print('>Imagens separadas com sucesso.\n')
+
+#################### P2N
+print('>Convertendo imagens em CSV:')
+order_p2n = 'python conversion_picture_to_numbers.py'
+#RAF(images_split_loc,p2n_loc,order_p2n)
+print('>Arquivos de imagem convertidos em csv com sucesso.\n')
+
+#################### Dataset
+print('>Criando Dataset:')
+order_dataset = 'python dataset.py'
+order_out=order_dataset +' '+p2n_loc+' '+dataset_file
+os.system(order_out)
+print('>Dataset criado com sucesso.\n')
+
+#################### Verificando Missing Values
+print('>Verificando dataset:')
+order_dataset = 'python atv1.py'
+order_out=order_dataset +' '+dataset_file
+os.system(order_out)
+print()
+
+#################### Standard Scaler
+print('>Padronizando entradas:')
+order_ss = 'python atv2.py'
+order_out=order_ss +' '+dataset_file+' '+dataset_ss_file+' '+trickbag_loc
+os.system(order_out)
+print('>Padronizacao de entradas concluido.\n')
+
+#################### Divisão do dataset entre treino e teste
+print('>Separação entre treino e teste:')
+order_ss = 'python atv3.py'
+order_out=order_ss +' '+dataset_ss_file+' '+trickbag_loc+' '+features_train_loc+' '+features_validation_loc+' '+str(proporcao_treino)
+os.system(order_out)
+print('>Separação entre treino e teste concluido.\n')
+
+#################### MLPC treino:
+print('>Treinando MLPC:')
+order_ss = 'python atv4.py'
+order_out=order_ss +' '+features_train_loc+' '+trickbag_loc+' '+predictor_loc
+os.system(order_out)
+print('>Treino Concluído.\n')
+
+#################### Predictor:
+print('>Rodando o predictor MLPC:')
+order_ss = 'python atv5.py'
+order_out=order_ss +' '+features_validation_loc+' '+predictor_loc
+os.system(order_out)
+print('>Treino Concluído.\n')
 
 
-'''
-file=sys.argv[1]+sys.argv[2]
-split_image(file,10, 10, False, False,output_dir=sys.argv[3])
-#split_image(image_path, rows, cols, should_square, should_cleanup, [output_dir])
-# e.g. split_image("bridge.jpg", 2, 2, True, False)'''
+
+

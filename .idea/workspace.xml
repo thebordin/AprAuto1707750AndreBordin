@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Lab Final/Trabalho.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab Final/line_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab Final/lab04full.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 01/dataset/character_predictor" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 01/dataset/character_predictor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 02/dataset/mesh_background.fig.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/dataset/mesh_background.fig.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 02/dataset/trickbag_mesh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 03/data/Preditor" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 03/data/Preditor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 04/data/heart_train_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/heart_train_3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 04/data/heart_validation_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/heart_validation_3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 04/data/predictorMLPC_heart_4.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 04/data/predictorMLPC_heart_4.sav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/Trabalho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/Trabalho.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/conversion_picture_to_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/conversion_picture_to_numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/dataset2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/line_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/image_frame.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/image_frame.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/ants.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/ants.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/bb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/bb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/bees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/bees.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/cherry.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/cherry.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/coffee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/coffee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/deer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/deer.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/nelore.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/nelore.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/pineapple.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/pineapple.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/weed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/weed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/zebra.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/lined/zebra.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/read_all_files.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/resize_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/split_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/split_images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Aprendizagem-Automática&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/thebo/OneDrive/Desktop/GitHub/AprAuto1707750AndreBordin&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Aprendizagem-Automática",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/thebo/OneDrive/Desktop/GitHub/AprAuto1707750AndreBordin/Lab Final",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\Lab Final" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 02" />
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\Lab 01" />
