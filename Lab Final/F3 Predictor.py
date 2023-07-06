@@ -11,10 +11,11 @@ url_dataset_sample_ss = './sample/data/dataset_sample_ss.csv'
 url_trickbag = './MLPC/MLPCpredictor.sav'
 predictor = joblib.load(open(url_trickbag, 'rb'))
 referencia = predictor['referencia']
+px = predictor['px']
 #################
 
 def P2N(url_sample, url_p2n_sample):
-    img = Image.open(url_sample).resize((25,25))
+    img = Image.open(url_sample).resize((px,px))
     arr = np.asarray(img)
     print(f'Convertendo {url_sample}: Array Shape: {arr.shape}')
     lst = []

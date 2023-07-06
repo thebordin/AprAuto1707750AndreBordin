@@ -83,14 +83,12 @@ def P2N(url_img_splited, url_p2n):
 
 def Dataset(url_p2n,url_dataset):
     referencia = ''
-    dataset = ''
     def build(contents):
         nonlocal dataset
         w_array = contents.split(";")
         for w in w_array:
             w.replace('\n',' ')
             ws = w.split(',')
-
             for z in ws:
                 z0 = z.replace('[  ','')
                 z1 = z0.replace('[ ','')
@@ -105,9 +103,12 @@ def Dataset(url_p2n,url_dataset):
                     lst.append(cheat)
                 avg = (int(lst[0]) + int(lst[1]) + int(lst[2]))/3
                 dataset += str(f'{float(avg)}')+';'
+    ds = open(url_dataset, "w")
+    dataset = ''
     dir_list = os.listdir(url_p2n)
     print(dir_list)
     for each in dir_list:
+        dataset = ''
         csv = url_p2n + each
         print(f'{each} Sendo adicionado ao DataSet')
         with open(csv) as f:
@@ -119,9 +120,7 @@ def Dataset(url_p2n,url_dataset):
         number = int(number_raw[0])
         label = int(number/10)
         dataset = dataset + str(label) + '\n'
-    print(f'{referencia}')
-    ds = open(url_dataset, "w")
-    ds.write(dataset)
+        ds.write(dataset)
     ds.close()
 
 def MVCheck(url_dataset):
@@ -140,6 +139,7 @@ def SS(url_dataset,url_dataset_ss,url_trickbag):
     dataset = pd.read_csv(url_dataset, header=None, sep=';')
     predictor = Pipeline([('StandardScaler', StandardScaler())])
     predictor.steps.append(['referencia', referencia])
+    predictor.steps.append(['px', px])
     dataset.iloc[:,:-1] = pd.DataFrame(predictor['StandardScaler'].fit_transform(dataset.iloc[:,0:-1]))
     try:
         dataset.to_csv(url_dataset_ss, index = False)
