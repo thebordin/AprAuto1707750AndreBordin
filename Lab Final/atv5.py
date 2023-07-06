@@ -18,5 +18,5 @@ y_predicted = trickbag['MLPC'].predict(x_ss)
 y_predicted = pd.DataFrame(y_predicted)
 
 cm = confusion_matrix(y_predicted,y_validation)
-
+print(f'Validation: \n{y_validation.T} \n Predicted: \n{y_predicted.T}')
 print('Traço = %.2f || Matriz confusão = %.2f || Score = %.2f || Precisao do MLPC = %.2f'% (cm.trace(), cm.sum(), trickbag['MLPC'].score(x_ss, y_validation), accuracy_score(y_validation, y_predicted)))
