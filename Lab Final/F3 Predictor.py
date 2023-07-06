@@ -1,10 +1,7 @@
-import os
 import joblib
 import pandas as pd
 import numpy as np
 from PIL import Image
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
 
 ######Setup######
 url_sample = './sample/sample.jpg'
@@ -92,4 +89,6 @@ P2N(url_sample, url_p2n_sample)
 Dataset(url_p2n_sample, url_dataset_sample)
 MVCheck(url_dataset_sample)
 SS(url_dataset_sample,url_dataset_sample_ss)
+print('##########################')
+print(f'Previsão para {url_sample} por {url_trickbag}:')
 Predict(url_dataset_sample_ss)

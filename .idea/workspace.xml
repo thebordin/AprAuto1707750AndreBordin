@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Lab Final/F2 Avaliação.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab Final/F3 Predictor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/Trabalho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/F1 Treino.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_train.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/dataset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/F2 Avaliação.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/F2 Avaliação.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/F3 Predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/F3 Predictor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/conversion_picture_to_numbers.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
