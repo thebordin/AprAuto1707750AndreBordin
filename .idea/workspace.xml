@@ -5,96 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/Lab Final/F2 Avaliação.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab Final/F3 Predictor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/atv5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/atv5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/Trabalho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/F1 Treino.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/atv5.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/data/features_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_train.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/features_validation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/image_frame.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/image_frame.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/data/tickbag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/cherry/ch9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/input/weed/weed9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/lined/weed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_70.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_70.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_71.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_71.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_72.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_72.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_73.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_73.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_74.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_74.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_75.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_75.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_76.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_76.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_77.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_77.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_78.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_78.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_79.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_79.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_80.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_80.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_81.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_81.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_82.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_82.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_83.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_83.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_84.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_84.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_85.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_85.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_86.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_86.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_87.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_87.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_88.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_88.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_89.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_89.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_90.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_90.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_91.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_91.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_92.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_92.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_93.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_93.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_94.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_94.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_95.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_95.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_96.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_96.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_97.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_97.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_98.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_98.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_99.jpg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/output_text/image_frame_99.jpg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_70.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_70.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_71.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_71.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_72.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_72.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_73.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_73.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_74.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_74.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_75.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_75.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_76.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_76.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_77.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_77.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_78.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_78.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_79.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_79.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_80.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_80.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_81.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_81.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_82.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_82.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_83.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_83.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_84.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_84.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_85.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_85.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_86.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_86.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_87.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_87.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_88.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_88.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_89.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_89.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_90.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_90.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_91.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_91.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_92.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_92.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_93.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_93.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_94.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_94.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_95.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_95.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_96.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_96.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_97.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_97.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_98.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_98.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_99.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/output/splited/image_frame_99.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/data/tickbag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Final/output/dataset/dataset_ss.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,70 +68,7 @@
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Trabalho">
-    <configuration name="Atividade 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 04" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Atividade 3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 04" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Atividade 4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AprAuto1707750AndreBordin" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab 04" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab 04/Atividade 4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.F3 Predictor">
     <configuration name="Atividade 5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Trabalho" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="F1 Treino (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AprAuto1707750AndreBordin" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,7 +102,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/Trabalho.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/F1 Treino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="F1 Treino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab Final" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\Lab Final\F1 Treino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="F2 Avaliação" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab Final" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/F2 Avaliação.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="F3 Predictor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AprAuto1707750AndreBordin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab Final" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab Final/F3 Predictor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Trabalho" />
+        <item itemvalue="Python.F3 Predictor" />
+        <item itemvalue="Python.F2 Avaliação" />
+        <item itemvalue="Python.F1 Treino (1)" />
+        <item itemvalue="Python.F1 Treino" />
         <item itemvalue="Python.Atividade 5" />
-        <item itemvalue="Python.Atividade 4" />
-        <item itemvalue="Python.Atividade 3" />
-        <item itemvalue="Python.Atividade 2" />
       </list>
     </recent_temporary>
   </component>
