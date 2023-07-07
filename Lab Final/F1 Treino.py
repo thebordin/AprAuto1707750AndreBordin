@@ -27,8 +27,9 @@ random_state = 42
 #################
 referencia = []
 
-
+# Conjunto de funções que vai desde a busca das imagens até o dataset dividido entre treino e teste
 def Tratamento_Dados():
+    # Busca as subpastas, redimensiona, cria as linhas e monta o MNist
     def MNist(url_images_raw, url_images_lined, url_image_frame):
         print('>Criando o MNinst:')
         count = 0
@@ -66,6 +67,7 @@ def Tratamento_Dados():
         print(f'>MNinst salvo em {url_image_frame}\n')
         image_frame.show()
 
+    # Picture 2 Numbers
     def P2N(url_img_splited, url_p2n):
         def Convert(ulr_img_splited, name, url_p2n):
             img = Image.open(ulr_img_splited + name)
@@ -87,6 +89,7 @@ def Tratamento_Dados():
         print("Files and directories in '", url_p2n, "' :")
         print(os.listdir(url_p2n))
 
+    # Dataset adicionando Labels
     def Dataset(url_p2n, url_dataset):
         referencia = ''
 
@@ -131,6 +134,7 @@ def Tratamento_Dados():
             ds.write(dataset)
         ds.close()
 
+    # Checando missing values
     def MVCheck(url_dataset):
         dataset = pd.read_csv(url_dataset, header=None, sep=';')
         #### FIM PARAMETROS ####
@@ -143,6 +147,7 @@ def Tratamento_Dados():
         else:
             print(f'!!!!! DATASET COM {cnt} M/V !!!!!')
 
+    # Aplicando Standart Scaler
     def SS(url_dataset, url_dataset_ss, url_trickbag):
         dataset = pd.read_csv(url_dataset, header=None, sep=';')
         predictor = Pipeline([('StandardScaler', StandardScaler())])
@@ -161,6 +166,7 @@ def Tratamento_Dados():
         except:
             print('Houve um erro em importar o Modelo StandardScaler')
 
+    # Divisão do dataset entre treino e teste
     def DSSplit(url_dataset_ss, url_features_train, url_features_validation, proporcao_treino_teste):
         rdm_state = random_state
         dataset = pd.read_csv(url_dataset_ss)
@@ -175,7 +181,6 @@ def Tratamento_Dados():
         except:
             print('Houve um problema na gravação dos datasets')
 
-    # Busca as subpastas, redimensiona, cria as linhas e monta o MNist
     print('>Buscando as imagens, tratando e montando o Frame:')
     MNist(url_images_raw, url_images_lined, url_image_frame)
     print('>Image Frame Concluido.\n')
@@ -185,32 +190,27 @@ def Tratamento_Dados():
     split_image(url_image_frame, 10, 10, False, False, False, output_dir=url_img_splited)
     print('>Divisão Concluida.\n')
 
-    # P2N
     print('>Convertendo imagem em números:')
     P2N(url_img_splited, url_p2n)
     print('>Conversão Concluida.\n')
 
-    # Dataset adicionando Labels
     print('>Criando o Dataset e adicionando os Labels:')
     Dataset(url_p2n, url_dataset)
     print('>Criação do Dataset Concluida.\n')
 
-    # Checando missing values
     print('>Checando missing values:')
     MVCheck(url_dataset)
     print('>Checagem Concluida.\n')
 
-    # Standard Scaler
     print('>Padronizando os dados de entrada:')
     SS(url_dataset, url_dataset_ss, url_trickbag)
     print('>Padronização Concluida.\n')
 
-    # Divisão do dataset entre treino e teste
     print('>Dividindo o dataset entre treino e validação:')
     DSSplit(url_dataset_ss, url_features_train, url_features_validation, proporcao_treino_teste)
     print('>Divisão Concluida.\n')
 
-
+# Função de treino do MLPC
 def TreinoMLPC(url_features_train, url_trickbag):
     rdm_state = random_state
     predictor = joblib.load(open(url_trickbag, 'rb'))
@@ -232,10 +232,10 @@ def TreinoMLPC(url_features_train, url_trickbag):
     except: print('Houve um erro ao gravar o predictor')
 
 
-
+# Função para tratar os dados
 Tratamento_Dados()
 
-# MLPC treino:
+# Função para chamar MLPC treino:
 print('>Treinando a MLPC:')
 TreinoMLPC(url_features_train, url_trickbag)
 print('>Treinamento Concluido.\n')
