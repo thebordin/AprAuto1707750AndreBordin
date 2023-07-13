@@ -1,4 +1,5 @@
 import os
+import random
 import joblib
 import pandas as pd
 import numpy as np
@@ -7,6 +8,8 @@ from sklearn.model_selection import train_test_split
 from PIL import Image
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.neural_network import MLPClassifier
 
 ######Setup######
@@ -22,12 +25,14 @@ url_features_validation = './data/features_validation.csv'
 url_trickbag = './MLPC/MLPCpredictor.sav'
 proporcao_treino_teste = 0.2
 px = 25 # Pixels
-na,nb,nc = 175,54,59 #NEURONIOS
+#na,nb,nc = 75,115,75 #NEURONIOS
 random_state = 42
-max_iter = 1000
+max_iter = 100
+min_neuron = 25
+max_neuron = 200
 #################
 referencia = []
-
+global count
 # Conjunto de funções que vai desde a busca das imagens até o dataset dividido entre treino e teste
 def Tratamento_Dados():
     # Busca as subpastas, redimensiona, cria as linhas e monta o MNist
@@ -212,11 +217,10 @@ def Tratamento_Dados():
     print('>Divisão Concluida.\n')
 
 # Função de treino do MLPC
-def TreinoMLPC(url_features_train, url_trickbag):
+def TreinoMLPC(url_features_train, url_trickbag,na, nb, nc):
     rdm_state = random_state
     predictor = joblib.load(open(url_trickbag, 'rb'))
     dataset = pd.read_csv(url_features_train)
-    print(dataset)
     features = dataset.iloc[:, :-1]
     labels = dataset.iloc[:,-1]
     predictor.steps.append(['MLPC', MLPClassifier(hidden_layer_sizes=(na,nb,nc),
@@ -230,13 +234,94 @@ def TreinoMLPC(url_features_train, url_trickbag):
         predictor_file = open(url_trickbag, 'wb')
         joblib.dump(predictor,predictor_file)
         print('Predictor gravado com sucesso')
+        print(f'na: {na}, nb: {nb}, nc: {nc}')
     except: print('Houve um erro ao gravar o predictor')
 
+def Avaliator():
+    predictor = joblib.load(open(url_trickbag, 'rb'))
+    dataset = pd.read_csv(url_features_validation)
+    x_ss = dataset.iloc[:, :-1]
+    y_validation = dataset.iloc[:, -1]
+
+    y_predicted = predictor['MLPC'].predict(x_ss)
+    y_predicted = pd.DataFrame(y_predicted)
+    score = predictor['MLPC'].score(x_ss, y_validation)
+    cm = confusion_matrix(y_predicted, y_validation)
+    print('Traço = %.2f || Matriz confusão = %.2f || Score = %.2f || Precisao do MLPC = %.2f' % (
+    cm.trace(), cm.sum(), score, accuracy_score(y_validation, y_predicted)))
+    return score
 
 # Função para tratar os dados
 Tratamento_Dados()
 
-# Função para chamar MLPC treino:
-print('>Treinando a MLPC:')
-TreinoMLPC(url_features_train, url_trickbag)
-print('>Treinamento Concluido.\n')
+def Avaliacao(na,nb,nc):
+    TreinoMLPC(url_features_train, url_trickbag, na, nb, nc)
+    return Avaliator()
+
+
+
+# Função de criação de indivíduo aleatório
+def criar_individuo():
+    return (random.randint(min_neuron, max_neuron), random.randint(min_neuron, max_neuron), random.randint(min_neuron, max_neuron))
+
+# Função de criação de população inicial
+def criar_populacao(tamanho_populacao):
+    return [criar_individuo() for _ in range(tamanho_populacao)]
+
+# Função de cruzamento de dois indivíduos
+def cruzar(individuo1, individuo2):
+    return (
+        random.choice([individuo1[0], individuo2[0]]),
+        random.choice([individuo1[1], individuo2[1]]),
+        random.choice([individuo1[2], individuo2[2]])
+    )
+
+# Função de mutação de um indivíduo
+def mutar(individuo):
+    return (
+        max(1, min(100, individuo[0] + random.randint(-10, 10))),
+        max(1, min(100, individuo[1] + random.randint(-10, 10))),
+        max(1, min(100, individuo[2] + random.randint(-10, 10)))
+    )
+
+# Função de seleção de indivíduos para reprodução
+def selecionar(populacao, tamanho_elite):
+    populacao_ordenada = sorted(populacao, key=lambda individuo: Avaliacao(*individuo), reverse=True)
+    return populacao_ordenada[:tamanho_elite]
+
+# Parâmetros do algoritmo genético
+tamanho_populacao = 70
+tamanho_elite = 7
+num_geracoes = 2
+
+# Criar população inicial
+populacao = criar_populacao(tamanho_populacao)
+
+# Iterar pelas gerações
+for geracao in range(num_geracoes):
+    # Selecionar indivíduos para reprodução
+    elite = selecionar(populacao, tamanho_elite)
+
+    # Realizar cruzamento e mutação para gerar nova população
+    nova_populacao = elite[:]
+    while len(nova_populacao) < tamanho_populacao:
+        print(f'Geração: {geracao}')
+        individuo1 = random.choice(elite)
+        individuo2 = random.choice(elite)
+        novo_individuo = cruzar(individuo1, individuo2)
+        novo_individuo = mutar(novo_individuo)
+        nova_populacao.append(novo_individuo)
+
+    # Atualizar a população
+    populacao = nova_populacao
+
+# Avaliar a melhor solução encontrada
+melhor_individuo = max(populacao, key=lambda individuo: Avaliacao(*individuo))
+melhor_na, melhor_nb, melhor_nc = melhor_individuo
+
+# Imprimir a melhor configuração encontrada
+print("Melhor configuração:")
+print("na:", melhor_na)
+print("nb:", melhor_nb)
+print("nc:", melhor_nc)
+print("Melhor score:", Avaliacao(melhor_na, melhor_nb, melhor_nc))
