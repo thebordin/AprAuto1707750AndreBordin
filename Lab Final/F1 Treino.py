@@ -22,7 +22,7 @@ url_features_validation = './data/features_validation.csv'
 url_trickbag = './MLPC/MLPCpredictor.sav'
 proporcao_treino_teste = 0.2
 px = 25 # Pixels
-na,nb,nc = 175,54,59 #NEURONIOS
+na,nb,nc = 66,100,49 #NEURONIOS
 random_state = 42
 max_iter = 1000
 #################

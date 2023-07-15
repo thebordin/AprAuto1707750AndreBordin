@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Lab Final/best_neuro_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/F1 Treino.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/F1 Treino.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/MLPC/MLPCpredictor.sav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/sample/data/dataset_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/sample/data/dataset_sample.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/sample/data/dataset_sample_ss.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/sample/data/dataset_sample_ss.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/sample/data/p2n_csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/sample/data/p2n_csv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Final/sample/sample.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Final/sample/sample.jpg" afterDir="false" />
-    </list>
+    <list default="true" id="4fb1a992-2f53-4423-8fba-d437bb9a8aba" name="Changes" comment="Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,16 +31,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Aprendizagem-Automática&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/thebo/OneDrive/Desktop/GitHub/AprAuto1707750AndreBordin&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Aprendizagem-Automática",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/thief/Documentos/GitHub/AprAuto1707750AndreBordin",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thebo\OneDrive\Desktop\GitHub\AprAuto1707750AndreBordin\Lab Final" />
